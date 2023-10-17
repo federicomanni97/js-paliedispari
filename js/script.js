@@ -9,3 +9,50 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (ovviamente  usando una funzione :faccia_nerd:)
 Dichiariamo chi ha vinto.
 */
+
+const btn = document.querySelector('button');
+const resultEl = document.querySelector(".alert");
+
+btn.addEventListener('click', function(){
+    const inputEl = document.getElementById('data').value;
+        for(let i = 0; i < inputEl.length; i++){
+            if(inputEl[i] !== inputEl[inputEl.length - 1 - i]){
+                return false;
+            }
+        }
+        console.log('La tua parola è palindroma');
+        return true;
+})
+
+//UTILITY
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const btnPari = document.getElementById('pari');
+const btnDispari = document.getElementById('dispari');
+const message2 = document.getElementById('winLoseText');
+let msg;
+
+btnPari.addEventListener('click', function(){
+    const numeroUtente = parseInt(document.getElementById('data2').value);
+    const numeroCpu = getRndInteger(1,5);
+    const risultato = numeroUtente  + numeroCpu;
+    (risultato % 2 === 0) ? msg = 'Vittoria!!!' : msg = 'Sconfitta...';
+    console.log(numeroUtente);
+    console.log(numeroCpu);
+    console.log(risultato);
+    console.log(msg);
+    message2.innerText = msg;
+})
+btnDispari.addEventListener('click', function(){
+    const numeroUtente = parseInt(document.getElementById('data2').value);
+    const numeroCpu = getRndInteger(1,5);
+    const risultato = numeroUtente  + numeroCpu;
+    (risultato % 2 === 0) ? msg = 'Sconfitta...' : msg = 'Vittoria!!!';
+    console.log(numeroUtente);
+    console.log(numeroCpu);
+    console.log(risultato);
+    console.log(msg);
+    message2.innerText = msg;
+})

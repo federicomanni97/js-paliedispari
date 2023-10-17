@@ -9,18 +9,26 @@
 </head>
 <body>
     <div class="app">
-        <h1>verifica studente classe 107</h1>
+        <h1 class="mt-2">Verifica studente classe 107</h1>
 
         <!--casella di input-->
         <label for="data">Dato in input</label>
-        <input type="text" id="data" name="data">
+        <input class="mt-2" type="text" id="data" value="" name="data">
 
         <!--bottone-->
-        <button>invia</button>    
+        <button class="btn btn-primary">invia</button>    
 
         <!--un contenitore per il risultato/errore-->
         <div class="alert d-none"></div>
     </div> 
+    <div>
+        <h1 class="mt-5">Pari o Dispari</h1>
+        <label for="inserisci un numero da 1 a 5"></label>
+        <input class="mt-2" id="data2" placeholder="Numero da 1 a 5" type="text">
+        <button id="pari" class="btn btn-primary">Pari</button>
+        <button id="dispari" class="btn btn-success">Dispari</button>
+        <div id="winLoseText" class="fs-2 text-danger m-1"></div>
+    </div>
 </body>
 <script src="js/script.js"></script>
 </html>
