@@ -56,3 +56,33 @@ btnDispari.addEventListener('click', function(){
     console.log(msg);
     message2.innerText = msg;
 })
+
+
+//CORREZIONE ESERCIZIO PALINDROMA
+
+let frase = "'ciao ragazzi, come state?'";
+console.log(frase.split(""));
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', function(){
+    const parola = document.getElementById('data').value;
+    console.log(parola;)
+    let palindroma = reverseWord(parola);
+    console.log(palindroma);
+})
+
+let parola = 'otto';
+let palindroma = reverseWord(parola);
+reverseWord(parola);
+function reverseWord(word){
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--){
+        reversedWord += word[i];
+
+        //SIGNIFICATO += reverseWord = reverseWord + word[i];
+
+        //console.log(reversedWord)
+    }
+    return reversedWord === word;
+
+}
